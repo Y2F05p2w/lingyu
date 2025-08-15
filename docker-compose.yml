@@ -15,7 +15,7 @@ services:
       - mynetwork
 
   php:
-    image: php:7.4-fpm
+    build: .
     container_name: php_container
     volumes:
       - ./web:/var/www/html
