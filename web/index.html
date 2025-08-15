@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>零域网安 - 靶场</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .content {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            display: block;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>零域网安靶场</h1>
+        </div>
+
+        <div class="content">
+            <h2>请选择您要练习的漏洞：</h2>
+            <ul>
+                <li><a href="vulnerable/sql_injection.php">SQL注入漏洞</a></li>
+                <li><a href="vulnerable/xss.php">XSS漏洞</a></li>
+                <li><a href="vulnerable/file_upload.php">文件上传漏洞</a></li>
+                <li><a href="vulnerable/command_injection.php">命令注入漏洞</a></li>
+                <li><a href="vulnerable/csrf.php">CSRF漏洞</a></li>
+                <li><a href="vulnerable/file_inclusion.php">文件包含漏洞</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>零域网安靶场 - 适用于网络安全教学</p>
+        </footer>
+    </div>
+</body>
+</html>
