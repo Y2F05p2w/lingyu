@@ -1,10 +1,21 @@
 <?php
-if (isset($_GET['message'])) {
-    $message = $_GET['message']; // 漏洞：未对输入进行转义
-    echo "<h1>Message: $message</h1>";
+$difficulty = isset($_GET['difficulty']) ? $_GET['difficulty'] : 'low';
+$message = isset($_GET['message']) ? $_GET['message'] : '';
+$output = '';
+
+switch ($difficulty) {
+    case 'low':
+        // 低难度：直接输出
+        $output = $message;
+        break;
+    case 'medium':
+        // 中难度：过滤<script>标签
+        $output = str_replace('<script>', '', $message);
+        break;
+    case 'high':
+        // 高难度：完全HTML转义
+        $output = htmlspecialchars($message);
+        break;
 }
 ?>
-<form method="GET" action="xss.php">
-    <input type="text" name="message" />
-    <input type="submit" value="Submit" />
-</form>
+<!-- 下拉框和表单结构与SQL注入页面一致 -->
